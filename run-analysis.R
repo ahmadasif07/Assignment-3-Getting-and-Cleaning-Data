@@ -54,5 +54,5 @@ finalData$subjectId <- as.factor(finalData$subjectId)
 finalData.melted <- melt(finalData, id = c("subjectId", "activityId"))
 finalData.mean <- dcast(finalData.melted, subjectId + activityId ~ variable, mean)
 
-write.table(finalData.mean, "tidy.txt", row.names = FALSE, quote = FALSE)
+write.table(finalData.mean, "tidydata.txt", row.names = FALSE, quote = FALSE)
 
